@@ -1,0 +1,407 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    /* border: 2px red solid; */
+}
+body{
+    background-color: #f2ebdc;    
+}
+
+/* HEADER */
+header {
+    background-color: #1f8c8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-right: 7%;
+}
+
+header ul {
+    display: flex;
+    margin-right: 5%;
+}
+
+header ul li {
+    list-style-type: none;
+    padding: 40px;
+    white-space: nowrap;
+}
+
+header ul li a {
+    padding: 10px;
+    color: #f2ebdc;
+    font-size: 18px;
+    text-decoration-line: none;
+    transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 10px;
+}
+
+header ul li a::after {
+    color: #f2ebdc;
+}
+
+header ul li a:hover {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    transform: scale(1.5);
+}
+
+.logo {
+    height: 100px;
+    padding-left: 50px;
+}
+/* FIM DO HEADER */
+
+/*Modificação: Uso do linear-gradient na imagem para "sombrear"*/ 
+.imagem1{
+    color: #24bfa3;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.377),rgba(0, 0, 0, 0.616)), url(https://conteudize.ai/blog/wp-content/uploads/2024/06/como-criar-prompts-para-geracao-de-imagens-com-ia.webp);
+    padding: 200px;
+    background-position: center;
+    filter: contrast();    
+}
+
+.contatos-do-projeto h2{
+    color: #24bfa3;
+    text-align: center;
+    font-size: 46px;
+    
+}
+
+.text {
+    margin: 8%;
+}
+
+.text h2{
+    font-size: 46px;
+    text-transform: uppercase;
+    color: #24bfa3;
+    text-align: center;
+}
+
+.text p{
+    font-family: 'noto sans';
+    font-size: 16px;
+    line-height: 1.4rem;
+}
+
+.imagem-projeto {
+    
+    display: flex;
+    justify-content: center;  
+}
+
+.imagem-projeto img{
+    width: 600px;
+    border-radius: 20px;
+}
+
+.contatos-do-projeto h2 {
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+}
+.contatos-do-projeto .imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 600px; */
+}
+
+.contatos-do-projeto .imgs img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    justify-content: baseline;
+    padding: 40px;   
+}
+
+.icons-redes {
+    display: flex;
+    padding: 10px;
+}
+
+.icons-redes a {
+    color: #000;
+}
+
+.icons-redes a i {
+    width: 150px;
+}
+
+/* INICIO FOOTER */
+/* INICIO FOOTER */
+/* INICIO FOOTER */
+/* INICIO FOOTER */
+
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: #1f8c8c;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.global-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 5%;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.global-footer ul li {
+    list-style-type: none;
+    padding: 0px 10px;
+    margin: 5px 0;
+}
+
+.global-footer ul a {
+    color: #f2ebdc;
+    text-decoration-line: none;
+}
+
+.content-footer {
+    flex-direction: column;
+    white-space: nowrap;
+    line-height: 1.6em;
+}
+
+.content-footer ul h2 {
+    padding: 10px;
+    color: #f2ebdc;
+}
+
+.content-footer ul li a {
+    font-size: 18px;
+}
+
+.logo-footer {
+    width: 100px;
+    height: auto;
+    margin: 25px;
+}
+
+.insta,
+.face,
+.tik {
+    display: flex;
+    align-items: center;
+}
+
+.insta a,
+.face a,
+.tik a {
+    display: flex;
+    align-items: center;
+}
+
+
+i {
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.insta,
+.face,
+.tik {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+/* -------------------------------MODO ESCURO------------------------------ */
+
+.dark-theme {
+    background-color: #333333;
+}
+
+.dark-theme .fa-brands{
+    color: #f2ebdc;
+}
+
+.dark-theme header {
+    background-color: #1b7070;
+}
+
+.dark-theme header ul li a {
+    color: #f2ebdc;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark-theme header ul li a::after {
+    color: #000;
+}
+
+.dark-theme header ul li a:hover{
+    background-color: #f2ebdc;
+    color: #333333;
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+.dark-theme .text p {
+    color: #f2ebdc;
+}
+
+.dark-theme .text h2{
+    color: #80bfb4;
+}
+
+.dark-theme footer{
+    background-color: #1b7070;
+}
+
+.dark-theme footer ul li a {
+    color: #f2ebdc;
+}
+
+.dark-theme footer h2{
+    color: #f2ebdc;
+}
+
+.dark-theme footer ul li a{
+    color: #f2ebdc;
+}
+
+/* -------------------checkbox personalizada do modo escuro---------------------- */
+
+.checkbox-wrapper-54 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+  }
+
+  .checkbox-wrapper-54 *,
+  .checkbox-wrapper-54 ::after,
+  .checkbox-wrapper-54 ::before {
+    box-sizing: border-box;
+  }
+
+  /* The switch - the box around the slider */
+  .checkbox-wrapper-54 .switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    display: inline-block;
+  }
+
+  /* The slider */
+  .checkbox-wrapper-54 .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+
+  .checkbox-wrapper-54 .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    ;
+   transition: .4s;
+  }
+
+  .checkbox-wrapper-54 input:checked + .slider {
+    background-color: #303136;
+  }
+
+  .checkbox-wrapper-54 input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+
+
+  /* Responsividade Página Projeto */
+@media(max-width:768px){
+    .logo{
+        padding: 9px;
+    }
+    
+    nav{
+        display: flex;
+        /* justify-content: space-evenly; */
+        /* align-items: center; */
+        padding: 60px;
+    }
+
+    header ul li a{
+        display: flex;
+        /* justify-content: space-around;
+        width: 40px; */
+    }
+
+    header ul li{
+        padding: 10px;
+    }
+
+    .text h2{
+        font-size: 30px;
+    }
+
+    .contatos-do-projeto h2{
+        font-size: 30px;
+    }
+
+    .img-projeto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+    }
+
+    .icons-redes{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .imagem1 h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+
+    footer{
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    }
+}

@@ -1,0 +1,544 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    /* border: 1px solid red; */
+}
+
+body {
+    background-color: #f2ebdc;
+
+}
+
+/* HEADER */
+header {
+    background-color: #1f8c8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-right: 7%;
+}
+
+header ul {
+    display: flex;
+    margin-right: 5%;
+}
+
+header ul li {
+    list-style-type: none;
+    padding: 40px;
+    white-space: nowrap;
+}
+
+header ul li a {
+    padding: 10px;
+    color: #f2ebdc;
+    font-size: 18px;
+    text-decoration-line: none;
+    transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 10px;
+}
+
+header ul li a::after {
+    color: #f2ebdc;
+}
+
+header ul li a:hover {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    transform: scale(1.5);
+}
+
+.logo {
+    height: 100px;
+    padding-left: 50px;
+}
+
+/* INICIO MENU HAMBURGUER */
+
+.menu-hamburguer {
+    
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+.menu-bar {
+    display: none;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+
+
+
+
+/* FIM DO HEADER */
+
+/* inicio carrocel  */
+.container {
+    width: 800px;
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 9px;
+}
+
+.tudo {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem img {
+    height: 100%;
+    width: 100%;
+}
+
+.bar {
+    background-color: #1b7070;
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 30px;
+}
+
+.bar:hover {
+    background-color: #f2ebdc;
+    width: 70px;
+}
+
+.navegacao {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%);
+}
+
+#imagem2:checked~.navegacao {
+    background-color: #c4e7db;
+}
+
+input {
+    display: none;
+}
+
+.img {
+    display: flex;
+    height: 100%;
+    width: 700%;
+}
+
+.imagem {
+    width: 14.28571428571429%;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#imagem1:checked~.img1 {
+    margin-left: 0;
+}
+
+#imagem2:checked~.img1 {
+    margin-left: -14.28571428571429%;
+}
+
+#imagem3:checked~.img1 {
+    margin-left: -28.57142857142857%;
+}
+
+#imagem4:checked~.img1 {
+    margin-left: -42.85714285714286%;
+}
+
+#imagem5:checked~.img1 {
+    margin-left: -57.14285714285715%;
+}
+
+#imagem6:checked~.img1 {
+    margin-left: -71.42857142857144%;
+}
+
+#imagem7:checked~.img1 {
+    margin-left: -85.71428571428573%;
+}
+
+/* final carrocel */
+
+/* INICIO OBJETIVO */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.text {
+    margin: 5%;
+}
+
+.text h2 {
+    font-size: 46px;
+    text-transform: uppercase;
+    color: #24bfa3;
+}
+
+.text p {
+    font-family: 'noto sans';
+    font-size: 16px;
+
+}
+
+p {
+    line-height: 1.4rem;
+}
+
+.imagens img {
+    max-width: 500px;
+    /* padding: 20px; */
+    border-radius: 9px;
+}
+
+/* FIM DOS OBJETIVOS */
+
+/* INICIO CARROSEL */
+.pictures {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.pictures img {
+    max-width: 400px;
+    border-radius: 2%;
+}
+
+/* FINAL CARROSEL */
+
+/* INICIO VALORES */
+.valores {
+    display: flex;
+    align-items: center;
+    margin: 5%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+/* INICIO FOOTER */
+/* INICIO FOOTER */
+/* INICIO FOOTER */
+/* INICIO FOOTER */
+
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: #1f8c8c;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.global-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 5%;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.global-footer ul li {
+    list-style-type: none;
+    padding: 0px 10px;
+    margin: 5px 0;
+}
+
+.global-footer ul a {
+    color: #f2ebdc;
+    text-decoration-line: none;
+}
+
+.content-footer {
+    flex-direction: column;
+    white-space: nowrap;
+    line-height: 1.6em;
+}
+
+.content-footer ul h2 {
+    padding: 10px;
+    color: #f2ebdc;
+}
+
+.content-footer ul li a {
+    font-size: 18px;
+}
+
+.logo-footer {
+    width: 100px;
+    height: auto;
+    margin: 25px;
+}
+
+.insta,
+.face,
+.tik {
+    display: flex;
+    align-items: center;
+}
+
+.insta a,
+.face a,
+.tik a {
+    display: flex;
+    align-items: center;
+}
+
+
+i {
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.insta,
+.face,
+.tik {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------------MODO ESCURO---------------------------- */
+
+.dark-theme {
+    background-color: #333333;
+}
+
+.dark-theme header {
+    background-color: #1b7070;
+}
+
+.dark-theme header ul li a {
+    color: #f2ebdc;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark-theme header ul li a::after {
+    color: #000;
+}
+
+.dark-theme header ul li a:hover {
+    background-color: #333333;
+    border-radius: 10px;
+    transform: scale(1.5);
+}
+
+.dark-theme .fa-brands {
+    color: #f2ebdc;
+}
+
+.dark-theme .text p {
+    color: #f2ebdc;
+}
+
+.dark-theme .text h2 {
+    color: #80bfb4;
+}
+
+.dark-theme footer {
+    background-color: #1b7070;
+}
+
+.dark-theme footer ul li a {
+    color: #f2ebdc;
+}
+
+.dark-theme footer h2 {
+    color: #f2ebdc;
+}
+
+.dark-theme footer ul li a {
+    color: #f2ebdc;
+}
+
+/* -------------------checkbox personalizada do modo escuro---------------------- */
+
+.checkbox-wrapper-54 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+
+}
+
+.checkbox-wrapper-54 *,
+.checkbox-wrapper-54 ::after,
+.checkbox-wrapper-54 ::before {
+    box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-54 .switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    display: inline-block;
+}
+
+/* The slider */
+.checkbox-wrapper-54 .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.checkbox-wrapper-54 .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    ;
+    transition: .4s;
+}
+
+.checkbox-wrapper-54 input:checked+.slider {
+    background-color: #303136;
+}
+
+.checkbox-wrapper-54 input:checked+.slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+/* responsiviade */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    header ul li {
+        padding: 10px;
+    }
+
+    header ul li a {
+        font-size: 13px;
+    }
+
+
+    /* MENU HAMBURGUER */
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .menu.active{
+        display: flex;
+    }
+        
+
+    .menu-hamburguer {
+        display: block;
+        cursor: pointer;
+        margin-right: 50px;
+        margin-top: 40px;
+    }
+    
+    .menu-bar {
+        display: flex;
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        margin: 5px;
+    }
+
+    
+
+    .main {
+        display: block;
+    }
+
+    .imagens img {
+        width: 300px;
+        height: auto;
+    }
+
+    .imagens {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .objetivos {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+        /* margin-right: 20px; */
+        margin-left: -20px;
+    }
+
+    .valores {
+        display: block;
+    }
+
+    .global-footer {
+        align-items: flex-start;
+    }
+
+    .content-footer ul li a {
+        font-size: 15px;
+    }
+
+    .content-footer ul h2 {
+        font-size: 18px;
+    }
+
+    .logo-footer {
+        display: none;
+    }
+}

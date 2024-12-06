@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 2px red solid; */
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+section {
+  display: flex;
+}
+
+.esquerda {
+  background-color: #F2EBDC;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.esquerda img {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 23%;
+}
+
+.direita {
+  width: 50%;
+  /* display: flex; */
+  background-color: #1F8C8C;
+  height: 100vh;
+}
+
+.direita .conteudo-lading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  transform: translate(50%, 50%);
+  line-height: 1.6;
+
+}
+
+i {
+  font-size: 30px;
+  color: #F2EBDC;
+  margin: 10px;
+  cursor: pointer;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+i:hover {
+  transform: scale(1.1);
+  /* color: #94918a; */
+  text-shadow: 1px 10px 2px black;
+}
+
+.conteudo-lading a button {
+  background-color: #F2EBDC;
+  border-radius: 10px;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.conteudo-lading a button:hover {
+  transform: scale(1.1);
+  background-color: #d1cdc3;
+}
+
+.direita h1 {
+  text-align: center;
+  color: #F2EBDC;
+  width: 400px;
+  margin-bottom: 25px;
+}
+
+.logo-responsiva {
+  display: none;
+}
+
+/* -----------------------MODO ESCURO----------------------- */
+
+.dark-theme .esquerda {
+  background-color: #333333;
+}
+
+.dark-theme .direita {
+  background-color: #1b7070;
+}
+
+/* -------------------checkbox personalizada do modo escuro---------------------- */
+
+.checkbox-wrapper-54 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-54 *,
+.checkbox-wrapper-54 ::after,
+.checkbox-wrapper-54 ::before {
+  box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-54 .switch {
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+  display: inline-block;
+  bottom: 450%;
+  left: 500%;
+}
+
+/* The slider */
+.checkbox-wrapper-54 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.checkbox-wrapper-54 .slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  ;
+  transition: .4s;
+}
+
+.checkbox-wrapper-54 input:checked+.slider {
+  background-color: #303136;
+}
+
+.checkbox-wrapper-54 input:checked+.slider:before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+
+
+
+/* INICIO DA RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+  
+  .esquerda{
+      display: none;
+
+  }
+  .direita{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    justify-content: center;
+  }
+
+  .direita .conteudo-lading{
+    align-items: center;
+
+  }
+
+  .logo-responsiva{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+  }
+
+  #logo{
+    margin: 0%;
+    padding: 0%;
+    height: 300px;
+    
+  }
+  
+}
