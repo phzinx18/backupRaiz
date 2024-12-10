@@ -24,6 +24,7 @@ section {
   justify-content: center;
   width: 250px;
   height: 250px;
+  
 
   position: absolute;
   transform: translate(-50%, -50%);
@@ -48,6 +49,10 @@ section {
   transform: translate(50%, 50%);
   line-height: 1.6;
 
+}
+
+a {
+  text-decoration: none;
 }
 
 i {

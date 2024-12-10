@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     /* border: 2px red solid; */
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 body {
@@ -66,15 +67,31 @@ header ul li a:hover {
 
 /* FIM DO HEADER */
 
+.imagem1 {
+    background-image: linear-gradient(to bottom, transparent 0%, #0000009c 50%), url(src/MD4.JPG);
+    background-size: 100% 110%;
+    background-position: top;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .imagem1 h1 {
-    position: absolute;
-    text-align: center;
-    top: 45%;
-    left: 45%;
+    text-align: center; 
     color: #24bfa3;
     font-size: 45px;
 }
+
+
+.imagem1 img {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
 
 .contatos-do-projeto h2 {
     color: #24bfa3;
@@ -84,7 +101,7 @@ header ul li a:hover {
 }
 
 .text {
-    margin: 8%;
+    margin: 5% 8%;
 }
 
 .text h2 {
@@ -98,9 +115,11 @@ header ul li a:hover {
     font-family: 'noto sans';
     font-size: 20px;
     line-height: 1.4em;
+    text-align: justify;
 }
 
 .imagem-projeto {
+
     display: flex;
     justify-content: center;
 }
@@ -379,26 +398,46 @@ i {
         justify-content: space-between;
     }
 
-    .text h2{
+    .text h2 {
         font-size: 45px;
     }
+
+    .text-img h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .imagens h1 {
+        text-align: center;
+    }
+
+    .imagem1 {
+        background-image: linear-gradient(to bottom, transparent 0%, #0000009c 50%), url(src/MD4.JPG);
+        /* background-size: 100% 100%; */
+        background-position: top;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     /* FIM DO HEADER */
 
     /* MENU HAMBURGUER */
 
 
-    .menu{
+    .menu {
         display: none;
         flex-direction: column;
         align-items: center;
         padding: 5px;
     }
 
-    .menu.active{
+    .menu.active {
         display: flex;
     }
-        
+
 
     .menu-hamburguer {
         display: block;
@@ -406,7 +445,7 @@ i {
         margin-right: 50px;
         margin-top: 40px;
     }
-    
+
     .menu-bar {
         display: flex;
         width: 25px;
@@ -415,7 +454,7 @@ i {
         margin: 5px;
     }
 
-    
+
 
     .main {
         display: block;
@@ -448,15 +487,19 @@ i {
         display: block;
     }
 
-    
-/* footer */
+    .text h2 {
+        margin:  20px 0;
+    }
+
+
+    /* footer */
     .global-footer {
         align-items: center;
         justify-content: center;
-        flex-direction: column; 
+        flex-direction: column;
     }
 
-    .content-footer{
+    .content-footer {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -465,20 +508,20 @@ i {
         margin: 0 5%;
         width: 100%;
     }
-    
+
     .redes-sociais ul {
         display: flex;
         margin-top: 10px;
     }
-    
+
     .redes-sociais ul h2 {
         display: none;
     }
-    
+
     .redes-sociais ul li {
         display: none;
     }
-    
+
     .content-footer ul li a {
         font-size: 15px;
         padding: 10px;
@@ -492,7 +535,9 @@ i {
         display: none;
     }
 
-    .insta, .face, .tik {
+    .insta,
+    .face,
+    .tik {
         padding: 10px;
     }
 

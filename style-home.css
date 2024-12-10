@@ -68,10 +68,29 @@ header ul li a:hover {
 /* INICIO MENU HAMBURGUER */
 
 .menu-hamburguer {
-    
     cursor: pointer;
     margin-right: 50px;
     margin-top: 40px;
+}
+
+
+.menu-hamburguer::before,
+.menu-hamburguer::after {
+    background-color: #000;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-hamburguer::before {
+    top: -10px;
+    translate: rotate(90deg);
+}
+
+.menu-hamburguer::after {
+    bottom: -10px;
+    translate: rotate(45deg);
 }
 
 .menu-bar {
@@ -88,10 +107,10 @@ header ul li a:hover {
 
 /* FIM DO HEADER */
 
-/* inicio carrocel  */
+/* inicio carrossel  */
 .container {
     width: 800px;
-    height: 460px;
+    height: auto;
     overflow: hidden;
     position: relative;
     border-radius: 9px;
@@ -119,7 +138,7 @@ header ul li a:hover {
 
 .bar:hover {
     background-color: #f2ebdc;
-    width: 70px;
+    width: 40px;
 }
 
 .navegacao {
@@ -138,15 +157,16 @@ input {
     display: none;
 }
 
-.img {
+.img-carrossel {
     display: flex;
     height: 100%;
-    width: 700%;
+    width: 400%;
 }
 
 .imagem {
-    width: 14.28571428571429%;
-    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 25%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
 }
 
 #imagem1:checked~.img1 {
@@ -154,27 +174,15 @@ input {
 }
 
 #imagem2:checked~.img1 {
-    margin-left: -14.28571428571429%;
+    margin-left: -25%;
 }
 
 #imagem3:checked~.img1 {
-    margin-left: -28.57142857142857%;
+    margin-left: -50%;
 }
 
 #imagem4:checked~.img1 {
-    margin-left: -42.85714285714286%;
-}
-
-#imagem5:checked~.img1 {
-    margin-left: -57.14285714285715%;
-}
-
-#imagem6:checked~.img1 {
-    margin-left: -71.42857142857144%;
-}
-
-#imagem7:checked~.img1 {
-    margin-left: -85.71428571428573%;
+    margin-left: -75%;
 }
 
 /* final carrocel */
@@ -199,19 +207,17 @@ input {
 
 .text p {
     font-family: 'noto sans';
-    font-size: 16px;
-
-}
-
-p {
-    line-height: 1.4rem;
+    font-size: 20px;
+    line-height: 1.4em;
 }
 
 .imagens img {
-    max-width: 500px;
+    max-width: 620px;
     /* padding: 20px; */
     border-radius: 9px;
 }
+
+
 
 /* FIM DOS OBJETIVOS */
 
@@ -237,6 +243,7 @@ p {
     margin: 5%;
     flex-direction: row-reverse;
     justify-content: space-between;
+    font-size: 20px;
 }
 
 /* INICIO FOOTER */
@@ -278,6 +285,7 @@ footer {
 
 .content-footer {
     flex-direction: column;
+
     white-space: nowrap;
     line-height: 1.6em;
 }
@@ -449,10 +457,13 @@ i {
 /* responsiviade */
 
 @media (max-width: 768px) {
+
+    /* HEADER */
     header {
         display: flex;
         width: 100%;
-        font-size: 12px;
+        height: 150px;
+        font-size: 14px;
     }
 
     header ul li {
@@ -463,21 +474,30 @@ i {
         font-size: 13px;
     }
 
+    nav {
+        justify-content: space-between;
+    }
+
+    .text h2 {
+        font-size: 45px;
+    }
+
+    /* FIM DO HEADER */
 
     /* MENU HAMBURGUER */
 
-    .menu{
+
+    .menu {
         display: none;
         flex-direction: column;
         align-items: center;
-
-
+        padding: 5px;
     }
 
-    .menu.active{
+    .menu.active {
         display: flex;
     }
-        
+
 
     .menu-hamburguer {
         display: block;
@@ -485,7 +505,7 @@ i {
         margin-right: 50px;
         margin-top: 40px;
     }
-    
+
     .menu-bar {
         display: flex;
         width: 25px;
@@ -494,7 +514,7 @@ i {
         margin: 5px;
     }
 
-    
+    /* FIM DO MENU HAMBURGUER */
 
     .main {
         display: block;
@@ -511,27 +531,60 @@ i {
         align-items: center;
     }
 
+    .tudo {
+        display: none;
+    }
+
     .objetivos {
         flex-wrap: wrap;
     }
 
     .logo {
-        width: 100px;
+        width: 115px;
         height: auto;
         /* margin-right: 20px; */
         margin-left: -20px;
+        margin-right: 30px;
     }
 
     .valores {
         display: block;
     }
 
+
+    /* footer */
     .global-footer {
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .content-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0 5%;
+        width: 100%;
+    }
+
+    .redes-sociais ul {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .redes-sociais ul h2 {
+        display: none;
+    }
+
+    .redes-sociais ul li {
+        display: none;
     }
 
     .content-footer ul li a {
         font-size: 15px;
+        padding: 10px;
     }
 
     .content-footer ul h2 {
@@ -541,4 +594,12 @@ i {
     .logo-footer {
         display: none;
     }
+
+    .insta,
+    .face,
+    .tik {
+        padding: 10px;
+    }
+
+    /* final footer */
 }

@@ -3,6 +3,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* border: 1px solid red; */
 }
 
 body {
@@ -70,7 +72,7 @@ header ul li a:hover {
 /* POR FAVOR, NÃO MEXER NESSA IMAGEM */
 #topo {
     width: 100%;
-    height: 550px;
+    height: 630px;
 
 }
 
@@ -83,7 +85,7 @@ header ul li a:hover {
 }
 
 /* PROJETOS DIREITA */
-.projeto-direito{
+.projeto-direito {
     background-color: #80bfb4;
     display: flex;
     align-items: center;
@@ -98,10 +100,19 @@ header ul li a:hover {
 }
 
 .text p {
-    text-align: justify;
-    font-size: 12px;
+    font-family: 'noto sans';
+    font-size: 20px;
+    line-height: 1.4em;
     padding: 20px 40px;
     width: 75%;
+}
+
+.projeto-esquerdo img{
+    border-radius: 30px;
+}
+
+.projeto-direito img{
+    border-radius: 30px;
 }
 
 .projeto-direito img {
@@ -109,20 +120,21 @@ header ul li a:hover {
     padding: 20px;
 }
 
-.projeto-direito button {
-    padding: 10px;
-    font-weight: 800;
-    white-space: nowrap;
-    border: none;
-    border-radius: 20px;
-    background-color: #1f8c8c;
-    margin: 20px;
-    margin-top: 80%;
-    
+.projeto-direito .container {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* PROJETOS ESQUERDA */
-.projeto-esquerdo{
+.projeto-esquerdo {
     background-color: #b0d9cd;
     display: flex;
     align-items: center;
@@ -133,17 +145,65 @@ header ul li a:hover {
 .projeto-esquerdo img {
     max-width: 250px;
     padding: 20px;
+
 }
 
-.projeto-esquerdo button {
-    padding: 10px;
-    font-weight: 800;
-    white-space: nowrap;
-    border: none;
-    border-radius: 20px;
-    background-color: #1f8c8c;
-    margin: 20px;
-    margin-top: 80%;
+
+/* ---------BUTTON PEGO DO SITE https://webdeasy.de/css-buttons/-------------- */
+.container {
+    cursor: pointer;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 180px;
+    height: 60px;
+    position: absolute;
+}
+
+.btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #1b7070;
+    border-radius: 5px;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+.btn:hover {
+    transition: 1s ease-in-out;
+    background: #1b7070;
+}
+
+.btn:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.btn span {
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 /* INICIO FOOTER */
@@ -233,8 +293,8 @@ i {
     display: flex;
     align-items: center;
 }
-/* -------------------------------MODO ESCURO------------------------------ */
 
+/* -------------------------------MODO ESCURO------------------------------ */
 .dark-theme {
     background-color: #333333;
 }
@@ -252,13 +312,13 @@ i {
     color: #000;
 }
 
-.dark-theme header ul li a:hover{
+.dark-theme header ul li a:hover {
     background-color: #333333;
     border-radius: 10px;
     transform: scale(1.5);
 }
 
-.dark-theme .fa-brands{
+.dark-theme .fa-brands {
     color: #f2ebdc;
 }
 
@@ -274,7 +334,7 @@ i {
     color: #f2ebdc;
 } */
 
-.dark-theme footer{
+.dark-theme footer {
     background-color: #1b7070;
 }
 
@@ -282,11 +342,11 @@ i {
     color: #f2ebdc;
 }
 
-.dark-theme footer h2{
+.dark-theme footer h2 {
     color: #f2ebdc;
 }
 
-.dark-theme footer ul li a{
+.dark-theme footer ul li a {
     color: #f2ebdc;
 }
 
@@ -295,16 +355,16 @@ i {
 .checkbox-wrapper-54 input[type="checkbox"] {
     visibility: hidden;
     display: none;
-  }
+}
 
-  .checkbox-wrapper-54 *,
-  .checkbox-wrapper-54 ::after,
-  .checkbox-wrapper-54 ::before {
+.checkbox-wrapper-54 *,
+.checkbox-wrapper-54 ::after,
+.checkbox-wrapper-54 ::before {
     box-sizing: border-box;
-  }
+}
 
-  /* The switch - the box around the slider */
-  .checkbox-wrapper-54 .switch {
+/* The switch - the box around the slider */
+.checkbox-wrapper-54 .switch {
     --width-of-switch: 3.5em;
     --height-of-switch: 2em;
     /* size of sliding icon -- sun and moon */
@@ -315,10 +375,10 @@ i {
     width: var(--width-of-switch);
     height: var(--height-of-switch);
     display: inline-block;
-  }
+}
 
-  /* The slider */
-  .checkbox-wrapper-54 .slider {
+/* The slider */
+.checkbox-wrapper-54 .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -328,29 +388,226 @@ i {
     background-color: #f4f4f5;
     transition: .4s;
     border-radius: 30px;
-  }
+}
 
-  .checkbox-wrapper-54 .slider:before {
+.checkbox-wrapper-54 .slider:before {
     position: absolute;
     content: "";
-    height: var(--size-of-icon,1.4em);
-    width: var(--size-of-icon,1.4em);
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
     border-radius: 20px;
-    left: var(--slider-offset,0.3em);
+    left: var(--slider-offset, 0.3em);
     top: 50%;
     transform: translateY(-50%);
-    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
     ;
-   transition: .4s;
-  }
+    transition: .4s;
+}
 
-  .checkbox-wrapper-54 input:checked + .slider {
+.checkbox-wrapper-54 input:checked+.slider {
     background-color: #303136;
-  }
+}
 
-  .checkbox-wrapper-54 input:checked + .slider:before {
-    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+.checkbox-wrapper-54 input:checked+.slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
     background: #303136;
     /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-  }
+}
+
+/* Responsividade Página Projetos */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        display: flex;
+        width: 100%;
+        height: 150px;
+        font-size: 14px;
+    }
+
+    header ul li {
+        padding: 10px;
+    }
+
+    header ul li a {
+        font-size: 13px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .topo h1 {
+        font-size: 45px;
+    }
+
+    #topo {
+        width: 100%;
+        height: auto;
+    
+    }
+
+    /* FIM DO HEADER */
+
+
+    /* MENU HAMBURGUER */
+
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .menu.active{
+        display: flex;
+    }
+        
+
+    .menu-hamburguer {
+        display: block;
+        cursor: pointer;
+        margin-right: 50px;
+        margin-top: 40px;
+    }
+    
+    .menu-bar {
+        display: flex;
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        margin: 5px;
+    }
+
+    /* FIM DO MENU HAMBURGUER */
+
+    .main {
+        display: block;
+    }
+
+    .imagens img {
+        width: 300px;
+        height: auto;
+    }
+
+    .imagens {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .objetivos {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 115px;
+        height: auto;
+        /* margin-right: 20px; */
+        margin-left: -20px;
+        margin-right: 30px;
+    }
+
+    .valores {
+        display: block;
+    }
+
+    .projeto-direito {
+        display: block;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .projeto-esquerdo {
+        display: block;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .projeto-esquerdo .container{
+        position: absolute;
+        left: 76%;
+        top: 21%;
+    }
+
+    .projeto-direito .container{
+        position: absolute;
+        left: 76%;
+        top: 24%;
+    }
+
+    .text {
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text h2{
+        text-align: center;
+        margin: 0;
+
+    }
+
+    .text p {
+    
+        text-align: justify;
+        margin: auto;
+        
+        
+    }
+
+
+    /* footer */
+    .global-footer {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .content-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0 5%;
+        width: 100%;
+    }
+
+    .redes-sociais ul {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .redes-sociais ul h2 {
+        display: none;
+    }
+
+    .redes-sociais ul li {
+        display: none;
+    }
+
+    .content-footer ul li a {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .content-footer ul h2 {
+        font-size: 18px;
+    }
+
+    .logo-footer {
+        display: none;
+    }
+
+    .insta,
+    .face,
+    .tik {
+        padding: 10px;
+    }
+
+    /* final footer */
+}
